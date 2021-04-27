@@ -57,8 +57,6 @@ def main():
 	for item in trainlist:
 		trainFeature.append(item.returnData())
 		trainLabel.append(item.returnLabel())
-	#print(featureMatrix)
-	#print("Begin Training")
 	clf = RandomForestClassifier(random_state=0)
 	clf.fit(trainFeature,trainLabel)
 	#print("Begin Predicting")
